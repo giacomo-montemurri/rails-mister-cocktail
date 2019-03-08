@@ -1,4 +1,10 @@
-<h1>Cocktails</h1>
+<div class="main_banner">
+  <div class="banner-text">
+    <h1>Cocktails Master</h1>
+    <h3>“Alcohol may be man’s worst enemy, but the Bible says love your enemy.”—Frank Sinatra</h3>
+    <button class="button"><%= link_to "Add a new cocktail", new_cocktail_path %></button>
+  </div>
+</div>
 
 <% @cocktails.each do |cocktail| %>
   <h2><%= cocktail.name %></h2>
@@ -6,6 +12,3 @@
   <%= link_to "show page", cocktail_path(cocktail) %>
 <% end %>
 
- <p><button><%= link_to "Add a new cocktail", new_cocktail_path %></button></p>
--------
-<%= cl_image_tag("zvq9lz7gt4b0tfabqgxo", width: 400, height: 300, crop: :fill) %>
